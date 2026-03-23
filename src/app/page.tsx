@@ -1,5 +1,8 @@
 import { NavbarSimple } from "../../registry/default/navbar-simple/navbar-simple";
 import { HeroCentered } from "../../registry/default/hero-centered/hero-centered";
+import { FeaturesGrid } from "../../registry/default/features-grid/features-grid";
+import { FeaturesAlternating } from "../../registry/default/features-alternating/features-alternating";
+import { FooterSimple } from "../../registry/default/footer-simple/footer-simple";
 
 export default function Home() {
   return (
@@ -26,7 +29,13 @@ export default function Home() {
         ]}
       />
 
-      {/* Dark Hero */}
+      {/* Features Grid */}
+      <FeaturesGrid background="surface" />
+
+      {/* Features Alternating */}
+      <FeaturesAlternating />
+
+      {/* Dark Hero — EdTech */}
       <HeroCentered
         badge="EdTech Example"
         headline={["Learn at Your Own Pace", "From Anywhere"]}
@@ -41,7 +50,7 @@ export default function Home() {
         ]}
       />
 
-      {/* Gradient Hero — E-commerce */}
+      {/* Gradient Hero — E-commerce (Indonesian copy) */}
       <HeroCentered
         badge="Gratis Ongkir"
         headline={["Semua yang Kamu Butuhkan", "Diantar ke Rumah"]}
@@ -58,22 +67,31 @@ export default function Home() {
         ]}
       />
 
-      {/* Footer placeholder */}
-      <footer
-        style={{
-          textAlign: "center",
-          padding: "3rem 1rem",
-          borderTop: "1px solid var(--color-border)",
-          color: "var(--color-text-muted)",
-          fontSize: "0.875rem",
-        }}
-      >
-        <p style={{ fontWeight: 600, marginBottom: "0.5rem", color: "var(--color-text-primary)" }}>
-          MarketBlocks UI
-        </p>
-        <p>Universal open source component registry for marketing landing pages.</p>
-        <p style={{ marginTop: "1rem" }}>MIT License © 2026</p>
-      </footer>
+      {/* Features Grid — Indonesian, Dark */}
+      <FeaturesGrid
+        badge="Fitur"
+        headline="Semua yang Kamu Butuhkan untuk Kirim Lebih Cepat"
+        subtitle="Komponen powerful untuk halaman marketing nyata. Tanpa lorem ipsum — langsung section siap produksi."
+        background="dark"
+        features={[
+          {
+            title: "Universal Props",
+            description:
+              "Konfigurasi mata uang, tipe input, mekanisme CTA, dan locale secara langsung.",
+          },
+          {
+            title: "Copy Bilingual",
+            description: "Copy profesional dalam bahasa Indonesia dan Inggris, siap pakai.",
+          },
+          {
+            title: "4 Preset Industri",
+            description: "SaaS, Finance, E-commerce, dan EdTech — ganti dengan satu prop.",
+          },
+        ]}
+      />
+
+      {/* Footer */}
+      <FooterSimple />
     </main>
   );
 }
