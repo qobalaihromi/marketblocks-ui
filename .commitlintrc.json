@@ -1,0 +1,29 @@
+{
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "scope-enum": [
+      2,
+      "always",
+      [
+        "hero",
+        "navbar",
+        "footer",
+        "features",
+        "pricing",
+        "cta",
+        "testimonial",
+        "logo-cloud",
+        "stats",
+        "faq",
+        "lead-capture",
+        "announcement",
+        "docs",
+        "registry",
+        "tokens",
+        "ci",
+        "content"
+      ]
+    ],
+    "scope-empty": [1, "never"]
+  }
+}
