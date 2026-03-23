@@ -1,0 +1,43 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "marketblocks-ui",
+  "homepage": "https://marketblocks-ui.dev",
+  "items": [
+    {
+      "name": "hero-centered",
+      "type": "registry:block",
+      "title": "Hero Centered",
+      "description": "Centered hero section with headline, subtitle, dual CTA, and optional input capture. Supports light/dark/gradient backgrounds, configurable currency, phone/email/custom input, and two-tone headline accent. Suitable for SaaS, EdTech, e-commerce, fintech, and any marketing landing page.",
+      "files": [
+        {
+          "path": "registry/default/hero-centered/hero-centered.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-split",
+      "type": "registry:block",
+      "title": "Hero Split",
+      "description": "Split hero with text on the left and visual on the right. Supports configurable CTA style (pill or rectangle), phone/email input capture, two-tone headline, trust signals, and floating widget slot. Works for SaaS, EdTech, e-commerce, finance, and any marketing page.",
+      "files": [
+        {
+          "path": "registry/default/hero-split/hero-split.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "navbar-simple",
+      "type": "registry:block",
+      "title": "Navbar Simple",
+      "description": "Simple responsive navbar with logo, navigation links, and CTA button. Supports pill or rectangle button style, mobile hamburger menu, dark mode, and configurable social links. Works for any marketing landing page.",
+      "files": [
+        {
+          "path": "registry/default/navbar-simple/navbar-simple.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

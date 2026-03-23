@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* ========================================
+   MarketBlocks UI — Design Token System
+   ======================================== */
+
+:root {
+  /* Brand — all configurable */
+  --color-brand: hsl(221 83% 53%);
+  --color-brand-fg: hsl(210 40% 98%);
+  --color-brand-hover: hsl(221 83% 46%);
+  --color-accent: hsl(38 95% 55%);
+  --color-accent-fg: hsl(0 0% 0%);
+
+  /* Backgrounds */
+  --color-bg-page: hsl(0 0% 100%);
+  --color-bg-surface: hsl(210 40% 98%);
+  --color-bg-muted: hsl(210 40% 96%);
+  --color-bg-hero: var(--color-bg-page);
+
+  /* Text */
+  --color-text-primary: hsl(222 47% 11%);
+  --color-text-secondary: hsl(215 16% 47%);
+  --color-text-muted: hsl(215 16% 62%);
+  --color-text-inverse: hsl(0 0% 100%);
+
+  /* Border */
+  --color-border: hsl(214 32% 91%);
+  --color-border-hover: hsl(214 32% 82%);
+
+  /* Typography */
+  --font-display: var(--font-geist-sans), "Inter", system-ui, sans-serif;
+  --font-body: var(--font-geist-sans), "Inter", system-ui, sans-serif;
+
+  /* Spacing */
+  --section-padding-y: clamp(4rem, 8vw, 8rem);
+  --section-padding-x: clamp(1rem, 5vw, 4rem);
+  --container-max: 1280px;
+
+  /* Radius */
+  --radius-cta: 0.5rem;
+  --radius-card: 0.75rem;
+  --radius-input: 0.5rem;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+  --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+  --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-page: hsl(222 47% 6%);
+    --color-bg-surface: hsl(222 47% 9%);
+    --color-bg-muted: hsl(222 47% 12%);
+    --color-bg-hero: var(--color-bg-page);
+    --color-text-primary: hsl(210 40% 98%);
+    --color-text-secondary: hsl(215 20% 65%);
+    --color-text-muted: hsl(215 16% 50%);
+    --color-border: hsl(215 28% 17%);
+    --color-border-hover: hsl(215 28% 25%);
+  }
+}
+
+/* Theme override: Warm (e-commerce, EdTech) */
+[data-theme="warm"] {
+  --color-brand: hsl(25 90% 52%);
+  --color-brand-fg: hsl(0 0% 100%);
+  --color-brand-hover: hsl(25 90% 44%);
+  --color-accent: hsl(48 96% 53%);
+  --color-bg-hero: hsl(231 60% 22%);
+  --radius-cta: 9999px;
+}
+
+/* Theme override: Trust (finance, B2B) */
+[data-theme="trust"] {
+  --color-brand: hsl(213 94% 24%);
+  --color-brand-fg: hsl(0 0% 100%);
+  --color-brand-hover: hsl(213 94% 18%);
+  --color-accent: hsl(164 71% 41%);
+  --color-bg-hero: hsl(0 0% 98%);
+  --radius-cta: 0.375rem;
+}
+
+/* Tailwind v4 theme registration */
+@theme inline {
+  --color-background: var(--color-bg-page);
+  --color-foreground: var(--color-text-primary);
+  --color-brand: var(--color-brand);
+  --color-brand-fg: var(--color-brand-fg);
+  --color-accent: var(--color-accent);
+  --color-surface: var(--color-bg-surface);
+  --color-muted: var(--color-bg-muted);
+  --color-border: var(--color-border);
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Base styles */
+body {
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}

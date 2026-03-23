@@ -1,0 +1,44 @@
+# MarketBlocks UI
+
+Universal open source component registry for marketing landing pages.
+Built on shadcn/ui registry format and Tailwind CSS v4.
+Works for any product type (SaaS, fintech, e-commerce, EdTech) and any market.
+All components support configurable currency, input type, CTA mechanism, and locale.
+Every component ships with professional default copy in Indonesian and English.
+
+## Available components
+- Hero (3 variants): hero-centered, hero-split, hero-minimal
+- Social proof: logo-cloud, testimonial-grid, testimonial-marquee, stats-counter
+- Features: features-grid, features-alternating
+- Pricing: pricing-simple, pricing-toggle
+- CTA: cta-centered, cta-split
+- Navigation: navbar-simple
+- Footer: footer-simple, footer-minimal
+- Misc: faq-accordion, lead-capture-form, announcement-bar, hero-video
+
+## Install
+npx shadcn@latest add https://marketblocks-ui.dev/r/hero-split.json
+
+## Registry
+https://marketblocks-ui.dev/r/{name}.json
+
+## Key props
+- inputCapture.type: "email" | "phone" | "text" | "none"
+- inputCapture.prefix: "+62" | "+1" | "+234" | any
+- currency.symbol: "Rp" | "$" | "€" | "₦" | any
+- currency.position: "before" | "after"
+- currency.separator.thousands: "." (ID) | "," (US)
+- cta.variant: "button" | "pill" | "pill-outline"
+- headlineAccentIndices: highlight specific words in accent color
+- background: "light" | "dark" | "gradient"
+- trustSignals: configurable rating, users, award, media badges
+
+## Default copy
+Each component includes professional default copy in:
+- Indonesian (ID) — casual, warm, WhatsApp-oriented
+- English (EN) — professional, direct, email-oriented
+
+## Content context presets
+Available per component for: SaaS, Finance, E-commerce, EdTech
+Each preset includes culturally appropriate headlines, CTAs, trust signals,
+and microcopy with correct number/currency formatting.
