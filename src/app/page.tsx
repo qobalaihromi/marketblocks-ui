@@ -10,6 +10,9 @@ import { ctaCenteredCaptureEN } from "../../registry/default/cta-centered/conten
 import { TestimonialGrid } from "../../registry/default/testimonial-grid/testimonial-grid";
 import { LogoCloud } from "../../registry/default/logo-cloud/logo-cloud";
 import { HeroMinimal } from "../../registry/default/hero-minimal/hero-minimal";
+import { StatsCounter } from "../../registry/default/stats-counter/stats-counter";
+import { FaqAccordion } from "../../registry/default/faq-accordion/faq-accordion";
+import { CtaSplit } from "../../registry/default/cta-split/cta-split";
 
 export default function Home() {
   return (
@@ -139,6 +142,15 @@ export default function Home() {
 
       {/* Testimonial Grid */}
       <TestimonialGrid />
+
+      {/* Stats Counter — Brand */}
+      <StatsCounter background="brand" />
+
+      {/* CTA Split */}
+      <CtaSplit />
+
+      {/* FAQ Accordion */}
+      <FaqAccordion background="surface" />
 
       {/* Footer */}
       <FooterSimple />

@@ -146,6 +146,42 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "stats-counter",
+      "type": "registry:block",
+      "title": "Stats Counter",
+      "description": "Grid-based statistics display. Automatically adjusts columns (2-4) based on content and screen size. Supports light, dark, surface, and brand backgrounds.",
+      "files": [
+        {
+          "path": "registry/default/stats-counter/stats-counter.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-accordion",
+      "type": "registry:block",
+      "title": "FAQ Accordion",
+      "description": "Smoothly animated FAQ accordion with accessible markup. Uses local React state for expand/collapse logic without external headless UI libraries.",
+      "files": [
+        {
+          "path": "registry/default/faq-accordion/faq-accordion.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "cta-split",
+      "type": "registry:block",
+      "title": "CTA Split",
+      "description": "50/50 side-by-side call to action section. Features text, dual CTAs, and bullet points on one side, and a designated visual slot (image/illustration) on the other. Order is reversible.",
+      "files": [
+        {
+          "path": "registry/default/cta-split/cta-split.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
