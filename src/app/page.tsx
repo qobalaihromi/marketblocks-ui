@@ -16,6 +16,8 @@ import { CtaSplit } from "../../registry/default/cta-split/cta-split";
 import { AnnouncementBar } from "../../registry/default/announcement-bar/announcement-bar";
 import { TestimonialMarquee } from "../../registry/default/testimonial-marquee/testimonial-marquee";
 import { LeadCaptureForm } from "../../registry/default/lead-capture-form/lead-capture-form";
+import { HeroVideo } from "../../registry/default/hero-video/hero-video";
+import { FooterMinimal } from "../../registry/default/footer-minimal/footer-minimal";
 
 export default function Home() {
   return (
@@ -45,7 +47,10 @@ export default function Home() {
         ]}
       />
 
-      {/* Features Grid */}
+      {/* Hero Video */}
+      <HeroVideo />
+
+      {/* Feature Grids... */}
       <FeaturesGrid background="surface" />
 
       {/* Features Alternating */}
@@ -164,8 +169,11 @@ export default function Home() {
       {/* FAQ Accordion */}
       <FaqAccordion background="surface" />
 
-      {/* Footer */}
+      {/* Footer Simple */}
       <FooterSimple />
+
+      {/* Footer Minimal */}
+      <FooterMinimal />
     </main>
   );
 }

@@ -218,6 +218,30 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "hero-video",
+      "type": "registry:block",
+      "title": "Hero Video",
+      "description": "Hero section featuring an autoplaying background video with a dark overlay to maintain text contrast and readability.",
+      "files": [
+        {
+          "path": "registry/default/hero-video/hero-video.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-minimal",
+      "type": "registry:block",
+      "title": "Footer Minimal",
+      "description": "Minimalist, compact footer designed for clean landing pages or waitlists. Single line layout on desktop, stacked on mobile.",
+      "files": [
+        {
+          "path": "registry/default/footer-minimal/footer-minimal.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
