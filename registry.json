@@ -110,6 +110,42 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "testimonial-grid",
+      "type": "registry:block",
+      "title": "Testimonial Grid",
+      "description": "Masonry-style grid for displaying customer testimonials. Supports 1-3 columns depending on screen size, with star ratings, avatars, and quotes.",
+      "files": [
+        {
+          "path": "registry/default/testimonial-grid/testimonial-grid.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud",
+      "type": "registry:block",
+      "title": "Logo Cloud",
+      "description": "Responsive flex-wrap grid for displaying company logos. Supports CSS grayscale/inversion filters for light and dark modes, and text fallbacks for missing logos.",
+      "files": [
+        {
+          "path": "registry/default/logo-cloud/logo-cloud.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-minimal",
+      "type": "registry:block",
+      "title": "Hero Minimal",
+      "description": "Typography-driven, highly minimal hero section. No visual slots, just a massive headline, subtitle, and dual CTA/input capture. Perfect for waitlists or simple landing pages.",
+      "files": [
+        {
+          "path": "registry/default/hero-minimal/hero-minimal.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }

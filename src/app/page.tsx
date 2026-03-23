@@ -7,6 +7,9 @@ import { PricingSimple } from "../../registry/default/pricing-simple/pricing-sim
 import { PricingToggle } from "../../registry/default/pricing-toggle/pricing-toggle";
 import { CtaCentered } from "../../registry/default/cta-centered/cta-centered";
 import { ctaCenteredCaptureEN } from "../../registry/default/cta-centered/content/default";
+import { TestimonialGrid } from "../../registry/default/testimonial-grid/testimonial-grid";
+import { LogoCloud } from "../../registry/default/logo-cloud/logo-cloud";
+import { HeroMinimal } from "../../registry/default/hero-minimal/hero-minimal";
 
 export default function Home() {
   return (
@@ -112,6 +115,30 @@ export default function Home() {
 
       {/* CTA Centered — Input Capture, Surface */}
       <CtaCentered {...ctaCenteredCaptureEN} background="surface" />
+
+      {/* Hero Minimal */}
+      <HeroMinimal />
+
+      {/* Hero Minimal — Dark with Input */}
+      <HeroMinimal
+        badge="Early Access"
+        headline={["The future of UI.", "Available today."]}
+        subtitle="Join 10,000+ developers building faster than ever before."
+        background="dark"
+        cta={undefined}
+        ctaSecondary={undefined}
+        inputCapture={{
+          type: "email",
+          placeholder: "name@company.com",
+          ctaLabel: "Get Access",
+        }}
+      />
+
+      {/* Logo Cloud */}
+      <LogoCloud background="surface" />
+
+      {/* Testimonial Grid */}
+      <TestimonialGrid />
 
       {/* Footer */}
       <FooterSimple />
