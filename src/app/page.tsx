@@ -13,10 +13,16 @@ import { HeroMinimal } from "../../registry/default/hero-minimal/hero-minimal";
 import { StatsCounter } from "../../registry/default/stats-counter/stats-counter";
 import { FaqAccordion } from "../../registry/default/faq-accordion/faq-accordion";
 import { CtaSplit } from "../../registry/default/cta-split/cta-split";
+import { AnnouncementBar } from "../../registry/default/announcement-bar/announcement-bar";
+import { TestimonialMarquee } from "../../registry/default/testimonial-marquee/testimonial-marquee";
+import { LeadCaptureForm } from "../../registry/default/lead-capture-form/lead-capture-form";
 
 export default function Home() {
   return (
     <main>
+      {/* Announcement Bar — Dismissible, sticky */}
+      <AnnouncementBar sticky dismissible background="brand" />
+
       <NavbarSimple />
 
       {/* Default Hero — No props needed */}
@@ -148,6 +154,12 @@ export default function Home() {
 
       {/* CTA Split */}
       <CtaSplit />
+
+      {/* Lead Capture Form — Gradient Background, Left form */}
+      <LeadCaptureForm background="gradient" />
+
+      {/* Testimonial Marquee */}
+      <TestimonialMarquee background="surface" speed={35} />
 
       {/* FAQ Accordion */}
       <FaqAccordion background="surface" />

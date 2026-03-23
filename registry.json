@@ -182,6 +182,42 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "announcement-bar",
+      "type": "registry:block",
+      "title": "Announcement Bar",
+      "description": "A dismissible, sticky or static announcement banner typically placed at the top of a page. Supports various color themes including gradients.",
+      "files": [
+        {
+          "path": "registry/default/announcement-bar/announcement-bar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "testimonial-marquee",
+      "type": "registry:block",
+      "title": "Testimonial Marquee",
+      "description": "Infinite scrolling horizontal marquee for testimonials or reviews. Pauses on hover and uses native CSS animations for smooth performance.",
+      "files": [
+        {
+          "path": "registry/default/testimonial-marquee/testimonial-marquee.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "lead-capture-form",
+      "type": "registry:block",
+      "title": "Lead Capture Form",
+      "description": "A comprehensive side-by-side lead capture form section. Great for e-book downloads, webinar signups, or newsletter subscriptions. Includes a prominent visual slot.",
+      "files": [
+        {
+          "path": "registry/default/lead-capture-form/lead-capture-form.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
