@@ -1,179 +1,145 @@
+import { Rocket, Settings, Code, Zap } from "lucide-react";
 import { NavbarSimple } from "../../registry/default/navbar-simple/navbar-simple";
 import { HeroCentered } from "../../registry/default/hero-centered/hero-centered";
 import { FeaturesGrid } from "../../registry/default/features-grid/features-grid";
-import { FeaturesAlternating } from "../../registry/default/features-alternating/features-alternating";
-import { FooterSimple } from "../../registry/default/footer-simple/footer-simple";
-import { PricingSimple } from "../../registry/default/pricing-simple/pricing-simple";
-import { PricingToggle } from "../../registry/default/pricing-toggle/pricing-toggle";
-import { CtaCentered } from "../../registry/default/cta-centered/cta-centered";
-import { ctaCenteredCaptureEN } from "../../registry/default/cta-centered/content/default";
-import { TestimonialGrid } from "../../registry/default/testimonial-grid/testimonial-grid";
-import { LogoCloud } from "../../registry/default/logo-cloud/logo-cloud";
-import { HeroMinimal } from "../../registry/default/hero-minimal/hero-minimal";
-import { StatsCounter } from "../../registry/default/stats-counter/stats-counter";
-import { FaqAccordion } from "../../registry/default/faq-accordion/faq-accordion";
-import { CtaSplit } from "../../registry/default/cta-split/cta-split";
-import { AnnouncementBar } from "../../registry/default/announcement-bar/announcement-bar";
 import { TestimonialMarquee } from "../../registry/default/testimonial-marquee/testimonial-marquee";
-import { LeadCaptureForm } from "../../registry/default/lead-capture-form/lead-capture-form";
-import { HeroVideo } from "../../registry/default/hero-video/hero-video";
-import { FooterMinimal } from "../../registry/default/footer-minimal/footer-minimal";
+import { FaqAccordion } from "../../registry/default/faq-accordion/faq-accordion";
+import { CtaCentered } from "../../registry/default/cta-centered/cta-centered";
+import { FooterSimple } from "../../registry/default/footer-simple/footer-simple";
 
 export default function Home() {
   return (
     <main>
-      {/* Announcement Bar — Dismissible, sticky */}
-      <AnnouncementBar sticky dismissible background="brand" />
+      <NavbarSimple
+        logo="Launch UI"
+        links={[
+          { label: "Resources", href: "#resources" },
+          { label: "Contact", href: "#contact" },
+          { label: "Blocks", href: "#blocks" },
+          { label: "Templates", href: "#templates" },
+        ]}
+        cta={{ label: "Get Template", href: "#", variant: "pill" }}
+      />
 
-      <NavbarSimple />
-
-      {/* Default Hero — No props needed */}
-      <HeroCentered />
-
-      {/* Hero with Input Capture */}
       <HeroCentered
-        badge="SaaS Example"
-        headline={["Ship Faster with", "Ready-Made Components"]}
-        headlineAccentIndices={[0, 1]}
-        subtitle="Stop rebuilding marketing pages from scratch. Get production-ready sections that work for any SaaS product."
-        inputCapture={{
-          type: "email",
-          placeholder: "Enter your work email",
-          ctaLabel: "Start Free Trial",
-        }}
-        trustSignals={[
-          { type: "users", label: "5,000+ teams" },
-          { type: "rating", label: "4.8 ★ on G2" },
-        ]}
+        headline={["Give your big idea", "the design it deserves"]}
+        headlineAccentIndices={[]}
+        subtitle="Carefully crafted components and templates built with React, Shadcn/ui and Tailwind that will help your product stand out from the crowd."
+        cta={{ label: "Start building", href: "#", variant: "button" }}
+        ctaSecondary={{ label: "View Components", href: "#blocks", variant: "ghost" }}
       />
 
-      {/* Hero Video */}
-      <HeroVideo />
+      <div id="blocks">
+        <FeaturesGrid
+          headline="It's all about design quality"
+          subtitle="Everything you need at your fingertips. You can change anything. But you don't have to."
+          columns={4}
+          features={[
+            {
+              icon: <Rocket />,
+              title: "Design-first",
+              description:
+                "Carefully crafted to look beautiful out of the box so you can focus on building.",
+            },
+            {
+              icon: <Zap />,
+              title: "Made for fast development",
+              description:
+                "Use our pre-built components to speed up your development process by 10x.",
+            },
+            {
+              icon: <Code />,
+              title: "The code is yours",
+              description: "Full access to the source code. Modify, adapt, and make it your own.",
+            },
+            {
+              icon: <Settings />,
+              title: "Data-agnostic",
+              description:
+                "Seamlessly integrates with your existing tech stack and database providers.",
+            },
+          ]}
+        />
+      </div>
 
-      {/* Feature Grids... */}
-      <FeaturesGrid background="surface" />
+      <div id="testimonials">
+        <TestimonialMarquee speed={40} />
+      </div>
 
-      {/* Features Alternating */}
-      <FeaturesAlternating />
+      <div id="faq">
+        <FaqAccordion
+          headline="Questions and Answers"
+          subtitle="Find answers to common questions about Launch UI."
+          faqs={[
+            {
+              question: "Why building a great landing page is critical for your business?",
+              answer:
+                "A great landing page is often the first impression a customer has of your product. It acts as your primary conversion machine, turning visitors into leads or customers.",
+            },
+            {
+              question: "Why use Launch UI instead of a no-code tool?",
+              answer:
+                "Launch UI gives you the speed of a no-code tool with the infinite flexibility of code. You own the code and can customize it exactly to your needs.",
+            },
+            {
+              question: "How is it different from other component libraries?",
+              answer:
+                "We focus on complete marketing sections rather than granular atomic components, saving you hours of assembling basic building blocks.",
+            },
+            {
+              question: "Are Figma files included?",
+              answer:
+                "Yes, our pro tier includes extensive Figma files matching all of our React components, enabling seamless designer-to-developer handoff.",
+            },
+            {
+              question: "Can I get a discount?",
+              answer:
+                "We offer purchasing parity discounts based on your location. Please contact our support team for more details.",
+            },
+          ]}
+        />
+      </div>
 
-      {/* Dark Hero — EdTech */}
-      <HeroCentered
-        badge="EdTech Example"
-        headline={["Learn at Your Own Pace", "From Anywhere"]}
-        headlineAccentIndices={[4, 5]}
-        subtitle="Join millions of learners worldwide. Access expert-led courses with lifetime access."
-        background="dark"
-        cta={{ label: "Enroll Free", href: "#", variant: "pill" }}
-        ctaSecondary={{ label: "Explore Courses", href: "#", variant: "ghost" }}
-        trustSignals={[
-          { type: "users", label: "3M+ students" },
-          { type: "rating", label: "4.9 ★ rating" },
-        ]}
-      />
-
-      {/* Gradient Hero — E-commerce (Indonesian copy) */}
-      <HeroCentered
-        badge="Gratis Ongkir"
-        headline={["Semua yang Kamu Butuhkan", "Diantar ke Rumah"]}
-        headlineAccentIndices={[0, 1, 2, 3]}
-        subtitle="Koleksi pilihan dengan harga tak terkalahkan. Belanja dari ribuan produk dengan pengiriman cepat."
-        background="gradient"
-        gradientFrom="hsl(25, 90%, 52%)"
-        gradientTo="hsl(340, 82%, 52%)"
-        cta={{ label: "Belanja Sekarang", href: "#", variant: "pill" }}
-        ctaSecondary={{ label: "Lihat Koleksi", href: "#", variant: "pill-outline" }}
-        trustSignals={[
-          { type: "users", label: "500rb+ pelanggan puas" },
-          { type: "rating", label: "4,7 ★ Google Play" },
-        ]}
-      />
-
-      {/* Features Grid — Indonesian, Dark */}
-      <FeaturesGrid
-        badge="Fitur"
-        headline="Semua yang Kamu Butuhkan untuk Kirim Lebih Cepat"
-        subtitle="Komponen powerful untuk halaman marketing nyata. Tanpa lorem ipsum — langsung section siap produksi."
-        background="dark"
-        features={[
-          {
-            title: "Universal Props",
-            description:
-              "Konfigurasi mata uang, tipe input, mekanisme CTA, dan locale secara langsung.",
-          },
-          {
-            title: "Copy Bilingual",
-            description: "Copy profesional dalam bahasa Indonesia dan Inggris, siap pakai.",
-          },
-          {
-            title: "4 Preset Industri",
-            description: "SaaS, Finance, E-commerce, dan EdTech — ganti dengan satu prop.",
-          },
-        ]}
-      />
-
-      {/* CTA Centered — Brand background (default) */}
-      <CtaCentered />
-
-      {/* CTA Centered — Dual CTA, Gradient */}
       <CtaCentered
-        background="gradient"
-        gradientFrom="hsl(250, 80%, 60%)"
-        gradientTo="hsl(280, 80%, 50%)"
-      />
-
-      {/* Pricing Simple */}
-      <PricingSimple />
-
-      {/* Pricing Toggle — Surface Background */}
-      <PricingToggle background="surface" />
-
-      {/* CTA Centered — Input Capture, Surface */}
-      <CtaCentered {...ctaCenteredCaptureEN} background="surface" />
-
-      {/* Hero Minimal */}
-      <HeroMinimal />
-
-      {/* Hero Minimal — Dark with Input */}
-      <HeroMinimal
-        badge="Early Access"
-        headline={["The future of UI.", "Available today."]}
-        subtitle="Join 10,000+ developers building faster than ever before."
-        background="dark"
-        cta={undefined}
+        headline={["Level-up your", "design game, today"]}
+        subtitle="Start building superior products with Launch UI's premium marketing components."
+        cta={{ label: "Start building with Launch UI", href: "#", variant: "button" }}
         ctaSecondary={undefined}
-        inputCapture={{
-          type: "email",
-          placeholder: "name@company.com",
-          ctaLabel: "Get Access",
-        }}
       />
 
-      {/* Logo Cloud */}
-      <LogoCloud background="surface" />
-
-      {/* Testimonial Grid */}
-      <TestimonialGrid />
-
-      {/* Stats Counter — Brand */}
-      <StatsCounter background="brand" />
-
-      {/* CTA Split */}
-      <CtaSplit />
-
-      {/* Lead Capture Form — Gradient Background, Left form */}
-      <LeadCaptureForm background="gradient" />
-
-      {/* Testimonial Marquee */}
-      <TestimonialMarquee background="surface" speed={35} />
-
-      {/* FAQ Accordion */}
-      <FaqAccordion background="surface" />
-
-      {/* Footer Simple */}
-      <FooterSimple />
-
-      {/* Footer Minimal */}
-      <FooterMinimal />
+      <FooterSimple
+        logo="Launch UI"
+        tagline="A proven solution for good design."
+        columns={[
+          {
+            title: "Product",
+            links: [
+              { label: "Components", href: "#" },
+              { label: "Pricing", href: "#" },
+              { label: "Blocks", href: "#" },
+              { label: "Templates", href: "#" },
+            ],
+          },
+          {
+            title: "Company",
+            links: [
+              { label: "About", href: "#" },
+              { label: "Blog", href: "#" },
+              { label: "Careers", href: "#" },
+              { label: "Contact", href: "#" },
+            ],
+          },
+          {
+            title: "Resources",
+            links: [
+              { label: "Community", href: "#" },
+              { label: "GitHub", href: "#" },
+              { label: "Support", href: "#" },
+              { label: "Terms of Service", href: "#" },
+            ],
+          },
+        ]}
+      />
     </main>
   );
 }

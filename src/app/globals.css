@@ -6,31 +6,31 @@
 
 :root {
   /* Brand — all configurable */
-  --color-brand: hsl(221 83% 53%);
-  --color-brand-fg: hsl(210 40% 98%);
-  --color-brand-hover: hsl(221 83% 46%);
-  --color-accent: hsl(38 95% 55%);
-  --color-accent-fg: hsl(0 0% 0%);
+  --color-brand: hsl(0 0% 9%);
+  --color-brand-fg: hsl(0 0% 98%);
+  --color-brand-hover: hsl(0 0% 25%);
+  --color-accent: hsl(0 0% 96%);
+  --color-accent-fg: hsl(0 0% 9%);
 
   /* Backgrounds */
   --color-bg-page: hsl(0 0% 100%);
-  --color-bg-surface: hsl(210 40% 98%);
-  --color-bg-muted: hsl(210 40% 96%);
+  --color-bg-surface: hsl(0 0% 98%);
+  --color-bg-muted: hsl(0 0% 96%);
   --color-bg-hero: var(--color-bg-page);
 
   /* Text */
-  --color-text-primary: hsl(222 47% 11%);
-  --color-text-secondary: hsl(215 16% 47%);
-  --color-text-muted: hsl(215 16% 62%);
+  --color-text-primary: hsl(0 0% 9%);
+  --color-text-secondary: hsl(0 0% 45%);
+  --color-text-muted: hsl(0 0% 55%);
   --color-text-inverse: hsl(0 0% 100%);
 
   /* Border */
-  --color-border: hsl(214 32% 91%);
-  --color-border-hover: hsl(214 32% 82%);
+  --color-border: hsl(0 0% 90%);
+  --color-border-hover: hsl(0 0% 80%);
 
   /* Typography */
-  --font-display: var(--font-geist-sans), "Inter", system-ui, sans-serif;
-  --font-body: var(--font-geist-sans), "Inter", system-ui, sans-serif;
+  --font-display: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
 
   /* Spacing */
   --section-padding-y: clamp(4rem, 8vw, 8rem);
@@ -57,15 +57,24 @@
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg-page: hsl(222 47% 6%);
-    --color-bg-surface: hsl(222 47% 9%);
-    --color-bg-muted: hsl(222 47% 12%);
+    --color-brand: hsl(0 0% 98%);
+    --color-brand-fg: hsl(0 0% 9%);
+    --color-brand-hover: hsl(0 0% 80%);
+    --color-accent: hsl(0 0% 15%);
+    --color-accent-fg: hsl(0 0% 98%);
+
+    --color-bg-page: hsl(0 0% 4%);
+    --color-bg-surface: hsl(0 0% 9%);
+    --color-bg-muted: hsl(0 0% 15%);
     --color-bg-hero: var(--color-bg-page);
-    --color-text-primary: hsl(210 40% 98%);
-    --color-text-secondary: hsl(215 20% 65%);
-    --color-text-muted: hsl(215 16% 50%);
-    --color-border: hsl(215 28% 17%);
-    --color-border-hover: hsl(215 28% 25%);
+
+    --color-text-primary: hsl(0 0% 98%);
+    --color-text-secondary: hsl(0 0% 65%);
+    --color-text-muted: hsl(0 0% 55%);
+    --color-text-inverse: hsl(0 0% 9%);
+
+    --color-border: hsl(0 0% 15%);
+    --color-border-hover: hsl(0 0% 25%);
   }
 }
 

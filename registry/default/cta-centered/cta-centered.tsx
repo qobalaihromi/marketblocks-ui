@@ -58,7 +58,7 @@ export function CtaCentered({
   const isGradient = background === "gradient";
   const isSurface = background === "surface";
 
-  const isLightText = isDark || isBrand || isGradient;
+  const isDarkBg = isDark || isGradient;
 
   let bgStyle: React.CSSProperties = {
     backgroundColor: isDark
@@ -68,7 +68,7 @@ export function CtaCentered({
         : isBrand
           ? "var(--color-brand)"
           : "var(--color-bg-page)",
-    color: isLightText ? "#ffffff" : "var(--color-text-primary)",
+    color: isBrand ? "var(--color-brand-fg)" : isDarkBg ? "#ffffff" : "var(--color-text-primary)",
   };
 
   if (isGradient) {
@@ -128,7 +128,12 @@ export function CtaCentered({
             style={{
               fontSize: "1.125rem",
               lineHeight: 1.6,
-              color: isLightText ? "hsla(0,0%,100%,0.8)" : "var(--color-text-secondary)",
+              color: isBrand
+                ? "var(--color-brand-fg)"
+                : isDarkBg
+                  ? "hsla(0,0%,100%,0.8)"
+                  : "var(--color-text-secondary)",
+              opacity: isBrand ? 0.8 : 1,
               marginBottom: "2.5rem",
               maxWidth: "600px",
               margin: "0 auto 2.5rem",
@@ -190,8 +195,16 @@ export function CtaCentered({
                 style={{
                   padding: "0.875rem 1.5rem",
                   borderRadius: "var(--radius-button)",
-                  backgroundColor: isBrand || isGradient ? "#ffffff" : "var(--color-brand)",
-                  color: isBrand || isGradient ? "var(--color-brand)" : "#ffffff",
+                  backgroundColor: isBrand
+                    ? "var(--color-brand-fg)"
+                    : isDarkBg
+                      ? "#ffffff"
+                      : "var(--color-brand)",
+                  color: isBrand
+                    ? "var(--color-brand)"
+                    : isDarkBg
+                      ? "var(--color-bg-hero)"
+                      : "#ffffff",
                   fontWeight: 600,
                   fontSize: "1rem",
                   border: "none",
@@ -221,14 +234,16 @@ export function CtaCentered({
                     padding: "0.875rem 1.75rem",
                     borderRadius:
                       cta.variant === "pill" ? "var(--radius-pill)" : "var(--radius-button)",
-                    backgroundColor:
-                      isBrand || isGradient ? "#ffffff" : isDark ? "#ffffff" : "var(--color-brand)",
-                    color:
-                      isBrand || isGradient
-                        ? "var(--color-brand)"
-                        : isDark
-                          ? "var(--color-bg-hero)"
-                          : "#ffffff",
+                    backgroundColor: isBrand
+                      ? "var(--color-brand-fg)"
+                      : isDarkBg
+                        ? "#ffffff"
+                        : "var(--color-brand)",
+                    color: isBrand
+                      ? "var(--color-brand)"
+                      : isDarkBg
+                        ? "var(--color-bg-hero)"
+                        : "#ffffff",
                     fontWeight: 600,
                     textDecoration: "none",
                   }}
@@ -248,11 +263,15 @@ export function CtaCentered({
                         : "var(--radius-button)",
                     backgroundColor:
                       ctaSecondary.variant === "ghost" ? "transparent" : "transparent",
-                    color: isLightText ? "#ffffff" : "var(--color-text-primary)",
+                    color: isBrand
+                      ? "var(--color-brand-fg)"
+                      : isDarkBg
+                        ? "#ffffff"
+                        : "var(--color-text-primary)",
                     border:
                       ctaSecondary.variant === "ghost"
                         ? "none"
-                        : `1px solid ${isLightText ? "hsla(0,0%,100%,0.3)" : "var(--color-border)"}`,
+                        : `1px solid ${isBrand ? "currentColor" : isDarkBg ? "hsla(0,0%,100%,0.3)" : "var(--color-border)"}`,
                     fontWeight: 600,
                     textDecoration: "none",
                   }}
