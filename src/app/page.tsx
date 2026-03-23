@@ -3,6 +3,10 @@ import { HeroCentered } from "../../registry/default/hero-centered/hero-centered
 import { FeaturesGrid } from "../../registry/default/features-grid/features-grid";
 import { FeaturesAlternating } from "../../registry/default/features-alternating/features-alternating";
 import { FooterSimple } from "../../registry/default/footer-simple/footer-simple";
+import { PricingSimple } from "../../registry/default/pricing-simple/pricing-simple";
+import { PricingToggle } from "../../registry/default/pricing-toggle/pricing-toggle";
+import { CtaCentered } from "../../registry/default/cta-centered/cta-centered";
+import { ctaCenteredCaptureEN } from "../../registry/default/cta-centered/content/default";
 
 export default function Home() {
   return (
@@ -89,6 +93,25 @@ export default function Home() {
           },
         ]}
       />
+
+      {/* CTA Centered — Brand background (default) */}
+      <CtaCentered />
+
+      {/* CTA Centered — Dual CTA, Gradient */}
+      <CtaCentered
+        background="gradient"
+        gradientFrom="hsl(250, 80%, 60%)"
+        gradientTo="hsl(280, 80%, 50%)"
+      />
+
+      {/* Pricing Simple */}
+      <PricingSimple />
+
+      {/* Pricing Toggle — Surface Background */}
+      <PricingToggle background="surface" />
+
+      {/* CTA Centered — Input Capture, Surface */}
+      <CtaCentered {...ctaCenteredCaptureEN} background="surface" />
 
       {/* Footer */}
       <FooterSimple />

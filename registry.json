@@ -74,6 +74,42 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "pricing-simple",
+      "type": "registry:block",
+      "title": "Pricing Simple",
+      "description": "Simple pricing section with badge, headline, subtitle, and 1-3 pricing cards. Features a highlighted 'Most Popular' tier, responsive grid layout, and generic currency symbol support. Ideal for SaaS and subscription businesses.",
+      "files": [
+        {
+          "path": "registry/default/pricing-simple/pricing-simple.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "pricing-toggle",
+      "type": "registry:block",
+      "title": "Pricing Toggle",
+      "description": "Interactive pricing section with a monthly/annually billing toggle. Includes a discount badge, dynamic price rendering, highlighted 'Most Popular' tier, and responsive grid layout. Perfect for SaaS billing.",
+      "files": [
+        {
+          "path": "registry/default/pricing-toggle/pricing-toggle.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "cta-centered",
+      "type": "registry:block",
+      "title": "CTA Centered",
+      "description": "Centered Call to Action section. Supports dual action buttons or an inline input capture form (email/phone). Multiple background themes supported including solid brand color, dark mode, surface, and gradients.",
+      "files": [
+        {
+          "path": "registry/default/cta-centered/cta-centered.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
